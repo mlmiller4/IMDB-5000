@@ -10,20 +10,20 @@ The following must be installed:
 * [Flask](https://www.fullstackpython.com/flask.html)
 * [Flask_RESTful](https://flask-restful.readthedocs.io/en/latest/)
 
-'''
+
 ## Getting Started
 Either clone this repository or download the code as a .zip file and extract to a folder.
 You may do the following:
 
-## Display the top ten most profitable genres, actors, directors, director/actor pairs as well as the highest ranked director/actor pairs on the IMDB:
+### Display the top ten most profitable genres, actors, directors, director/actor pairs as well as the highest ranked director/actor pairs on the IMDB:
 $python IMDB.py
 
-## Run unit tests on the functions in the IMDB.py file:
+### Run unit tests on the functions in the IMDB.py file:
 $python test_IMDB.py
 
-## Start a REST endpoint that contains the actors name and number of facebook likes:
+### Start a REST endpoint that contains the actors name and number of facebook likes:
 $python flask_app_IMDB.py
-'''
+
 
 ### Using the REST endpoint:
 To see an actor's full name and number of facebook likes, enter the following, along with the actor's last name.
