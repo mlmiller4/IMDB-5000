@@ -26,12 +26,15 @@ $python flask_app_IMDB.py
 
 
 ### Using the REST endpoint:
+
+### GET:
 To see an actor's full name and number of facebook likes, enter the following, along with the actor's last name.
-curl http://127.0.0.1:5000/actor/<actor last name>
+curl http://127.0.0.1:5000/actor/{actor last name}
 
 #### Example:
 To see information for Harrison Ford, enter http://127.0.0.1:5000/actor/Ford
 
+### POST
 To add a new actor's information, use the following:
 $curl -H "Content-Type:application/json" -X POST -d '{"last name":"<actor's last name>","full name":"<actor's full name>","facebook likes":<number of facebook likes>}' http://127.0.0.1:5000/actor/<actor's last name>
   
@@ -39,6 +42,7 @@ $curl -H "Content-Type:application/json" -X POST -d '{"last name":"<actor's last
 To enter Tom Hardy, who has 27,000 facebook likes, use the following:
 $curl -H "Content-Type:application/json" -X POST -d '{"last name":"Hardy","full name":"Tom Hardy","facebook likes":27000}' http://127.0.0.1:5000/actor/Hardy
 
+### PUT
 To update an existing actor's information use the following:
 $curl -H "Content-Type:application/json" -X PUT -d '{"last name":"<actor's last name>","full name":"<actor's full name>","facebook likes":<number of facebook likes>}' http://127.0.0.1:5000/actor/<actor's last name>
 
@@ -46,6 +50,7 @@ $curl -H "Content-Type:application/json" -X PUT -d '{"last name":"<actor's last 
 To change Harrison Ford's number of facebook likes to 123456, use the following:
 $curl -H "Content-Type:application/json" -X PUT -d '{"last name":"Ford","full name":"Harrison Ford","facebook likes":123456}' http://127.0.0.1:5000/actor/Ford
 
+### DELETE
 To delete and actor from the REST endpoint use the following:
 $curl -X DELETE http://127.0.0.1:5000/actor/<actor's last name>
 
