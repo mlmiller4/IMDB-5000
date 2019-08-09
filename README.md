@@ -56,7 +56,7 @@ To change Harrison Ford's number of facebook likes to 123456, use the following:
 $curl -H "Content-Type:application/json" -X PUT -d '{"last name":"Ford","full name":"Harrison Ford","facebook likes":123456}' http://127.0.0.1:5000/actor/Ford
 
 ### DELETE
-To delete and actor from the REST endpoint use the following:
+To delete an actor from the REST endpoint use the following:
 
 $curl -X DELETE http://127.0.0.1:5000/actor/[actor's last name]
 
