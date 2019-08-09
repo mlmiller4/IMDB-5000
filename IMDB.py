@@ -96,6 +96,7 @@ def top_10_pairs(pairDF):
 
     return grouped[:10]
 
+''' Returns data frame with director/actor pairs with highest IMDB rating'''
 def top_10_IMDB_pairs(pairDF):
 
     # Group by 'director_name' & 'actor_1_name', aggregate 'profit' column, sort descending, and return first 10 rows
@@ -132,15 +133,6 @@ def printResultsDF(resultsDF):
         for index, row in resultsDF.iterrows():
             print(row['genre'] + ' : $' + '{:,}'.format(int(row['total_profit'])))
 
-
-''' No longer needed '''
-# ''' Prints results in List form, formats values to monetary standard '''
-# def printResults(results):
-#     for i in range(len(results)):
-#         g = results[i][0]
-#         p = int(results[i][1])
-#         print(g + " : $" + '{:,}'.format(p))
-''' ---------------------------------------------------------------------------'''
 
 """ Calculate profit by 'gross' - 'budget' and profit margin by ('gross' - 'budget')/'budget'   """
 def calculateProfit(profitDF):
