@@ -4,7 +4,7 @@ Data analysis using Pandas performed on a 5000-record set of movie data from the
 ## Prerequisites
 
 The following must be installed:
-* Python 3.x
+* [Python 3.x](https://www.python.org/downloads/)
 * [NumPy](https://www.numpy.org/)
 * [Pandas](https://pandas.pydata.org/)
 * [Flask](https://www.fullstackpython.com/flask.html)
@@ -30,7 +30,7 @@ $python flask_app_IMDB.py
 ### GET:
 To see an actor's full name and number of facebook likes, enter the following, along with the actor's last name:
 
-$curl http://127.0.0.1:5000/actor/[actor last name]
+$curl http://127.0.0.1:5000/actor/ [actor's last name]
 
 #### Example:
 To see information for Harrison Ford, enter http://127.0.0.1:5000/actor/Ford
@@ -48,7 +48,7 @@ $curl -H "Content-Type:application/json" -X POST -d '{"last name":"Hardy","full 
 ### PUT
 To update an existing actor's information use the following:
 
-$curl -H "Content-Type:application/json" -X PUT -d '{"last name":"[actor's last name]","full name":"[actor's full name]","facebook likes":[number of facebook likes]}' http://127.0.0.1:5000/actor/[actor's last name]
+$curl -H "Content-Type:application/json" -X PUT -d '{"last name":"[actor's last name]","full name":"[actor's full name]","facebook likes":[number of facebook likes]}' http://127.0.0.1:5000/actor/ [actor's last name]
 
 #### Example:
 To change Harrison Ford's number of facebook likes to 123456, use the following:
@@ -58,7 +58,7 @@ $curl -H "Content-Type:application/json" -X PUT -d '{"last name":"Ford","full na
 ### DELETE
 To delete an actor from the REST endpoint use the following:
 
-$curl -X DELETE http://127.0.0.1:5000/actor/[actor's last name]
+$curl -X DELETE http://127.0.0.1:5000/actor/ [actor's last name]
 
 #### Example:
 To delete Harrison Ford from the rest endpoint:
