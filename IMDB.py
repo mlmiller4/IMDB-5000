@@ -4,6 +4,14 @@ import itertools
 pd.set_option('display.max_columns',50)
 
 def top_10_genres(genreDF):
+    """
+    Parses the genres of movies from the 'genres' column of the movie dataframe, adds columns for each genre, then
+    adds a 1 if the genre is contained in the 'genres' column, and a 0 if not.
+    Finally, calculates the top 10 most profitable movies genres.
+
+    :param genreDF: dataframe with movie data
+    :return: dataframe with 10 most profitable genres
+    """
 
     """
     Parse the genres column to create a column for each genre with a 1 or 0 indicating whether
@@ -128,12 +136,25 @@ def printResultsDF(resultsDF):
 
 """ Calculate profit by 'gross' - 'budget' and profit margin by ('gross' - 'budget')/'budget'   """
 def calculateProfit(profitDF):
+    """
+    Calculates profit for all movies in dataset by subtracting movie budget from gross.
+
+    :param profitDF: dataframe of movie data
+    :return: dataframe with 'profit' column added that contains profit for each movie
+    """
     profitDF['profit'] = profitDF['gross'] - profitDF['budget']
     #profitDF['profit_margin'] = (profitDF['profit'] / profitDF['budget']) * 100
     return profitDF
 
-''' Get specified columns from the dataset'''
+
 def get_columns(getColumnsDF, cols):
+    """
+    Get specified columns from the dataframe
+
+    :param getColumnsDF: dataframe
+    :param cols: list of column labels
+    :return: dataframe containing only columns listed in cols
+    """
     return pd.DataFrame(getColumnsDF, columns=cols)
 
 
