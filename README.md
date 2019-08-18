@@ -33,38 +33,38 @@ To see an actor's full name and number of facebook likes, enter the following, a
 $curl http://<i></i>127.0.0.1:5000/actor/[actor's last name]
 
 #### Example:
-To see information for Harrison Ford, enter http&#58;//127.0.0.1:5000/actor/Ford
+To see information for Harrison Ford, enter http://<i></i>127.0.0.1:5000/actor/Ford
 
 ### POST
 To add a new actor's information, use the following:
 
-$curl -H "Content-Type:application/json" -X POST -d '{"last name":" [actor's last name] ","full name":" [actor's full name] ","facebook likes": [number of facebook likes] }' http://127.0.0.1:5000/actor/ [actor's last name]
+$curl -H "Content-Type:application/json" -X POST -d '{"last name":" [actor's last name] ","full name":" [actor's full name] ","facebook likes": [number of facebook likes] }' http://<i></i>127.0.0.1:5000/actor/[actor's last name]
   
 #### Example:
 To enter Tom Hardy, who has 27,000 facebook likes, use the following:
 
-$curl -H "Content-Type:application/json" -X POST -d '{"last name":"Hardy","full name":"Tom Hardy","facebook likes":27000}' http://127.0.0.1:5000/actor/Hardy
+$curl -H "Content-Type:application/json" -X POST -d '{"last name":"Hardy","full name":"Tom Hardy","facebook likes":27000}' http://<i></i>127.0.0.1:5000/actor/Hardy
 
 ### PUT
 To update an existing actor's information use the following:
 
-$curl -H "Content-Type:application/json" -X PUT -d '{"last name":"[actor's last name]","full name":"[actor's full name]","facebook likes":[number of facebook likes]}' http://127.0.0.1:5000/actor/ [actor's last name]
+$curl -H "Content-Type:application/json" -X PUT -d '{"last name":"[actor's last name]","full name":"[actor's full name]","facebook likes":[number of facebook likes]}' http://<i></i>127.0.0.1:5000/actor/[actor's last name]
 
 #### Example:
 To change Harrison Ford's number of facebook likes to 123456, use the following:
 
-$curl -H "Content-Type:application/json" -X PUT -d '{"last name":"Ford","full name":"Harrison Ford","facebook likes":123456}' http://127.0.0.1:5000/actor/Ford
+$curl -H "Content-Type:application/json" -X PUT -d '{"last name":"Ford","full name":"Harrison Ford","facebook likes":123456}' http://<i></i>127.0.0.1:5000/actor/Ford
 
 ### DELETE
 To delete an actor from the REST endpoint use the following:
 
-$curl -X DELETE http://127.0.0.1:5000/actor/ [actor's last name]
+$curl -X DELETE http://<i></i>127.0.0.1:5000/actor/ [actor's last name]
 
 #### Example:
 To delete Harrison Ford from the rest endpoint:
 
-$curl -X DELETE http://127.0.0.1:5000/actor/Ford
+$curl -X DELETE http://<i></i>127.0.0.1:5000/actor/Ford
 
-You will receive a "Ford is deleted" message, and if you enter http://127.0.0.1:5000/actor/Ford you will get an "Actor not found" message.
+You will receive a "Ford is deleted" message, and if you enter http://<i></i>127.0.0.1:5000/actor/Ford you will get an "Actor not found" message.
 
 
