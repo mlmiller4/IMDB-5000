@@ -134,7 +134,7 @@ def printResultsDF(resultsDF):
             print(row['genre'] + ' : $' + '{:,}'.format(int(row['total_profit'])))
 
 
-""" Calculate profit by 'gross' - 'budget' and profit margin by ('gross' - 'budget')/'budget'   """
+
 def calculateProfit(profitDF):
     """
     Calculates profit for all movies in dataset by subtracting movie budget from gross.
