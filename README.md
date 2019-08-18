@@ -58,7 +58,7 @@ $curl -H "Content-Type:application/json" -X PUT -d '{"last name":"Ford","full na
 ### DELETE
 To delete an actor from the REST endpoint use the following:
 
-$curl -X DELETE http://<i></i>127.0.0.1:5000/actor/ [actor's last name]
+$curl -X DELETE http://<i></i>127.0.0.1:5000/actor/[actor's last name]
 
 #### Example:
 To delete Harrison Ford from the rest endpoint:
