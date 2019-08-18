@@ -30,7 +30,7 @@ $python flask_app_IMDB.py
 ### GET:
 To see an actor's full name and number of facebook likes, enter the following, along with the actor's last name:
 
-$curl http&#58;//127.0.0.1:5000/actor/[actor's last name]
+$curl http://<i></i>127.0.0.1:5000/actor/[actor's last name]
 
 #### Example:
 To see information for Harrison Ford, enter http&#58;//127.0.0.1:5000/actor/Ford
