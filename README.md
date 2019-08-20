@@ -30,41 +30,43 @@ $python flask_app_IMDB.py
 ### GET:
 To see an actor's full name and number of facebook likes, enter the following, along with the actor's last name:
 
-$curl http://<i></i>127.0.0.1:5000/actor/[actor's last name]
+$curl -s http://<i></i>127.0.0.1:5000/actor/[actor's unspaced name]
 
 #### Example:
-To see information for Harrison Ford, enter http://<i></i>127.0.0.1:5000/actor/Ford
+To see information for Harrison Ford, enter http://<i></i>127.0.0.1:5000/actor/HarrisonFord
 
 ### POST
 To add a new actor's information, use the following:
 
-$curl -H "Content-Type:application/json" -X POST -d '{"last name":" [actor's last name] ","full name":" [actor's full name] ","facebook likes": [number of facebook likes] }' http://<i></i>127.0.0.1:5000/actor/[actor's last name]
+$curl -H "Content-Type:application/json" -X POST -d '{"name":"[actor's name]","facebook likes":[number of facebook likes],"unspacedName":"[actor's unspaced name]}' http://<i></i>127.0.0.1:5000/actor/[actor's unspaced name]
   
 #### Example:
 To enter Tom Hardy, who has 27,000 facebook likes, use the following:
 
-$curl -H "Content-Type:application/json" -X POST -d '{"last name":"Hardy","full name":"Tom Hardy","facebook likes":27000}' http://<i></i>127.0.0.1:5000/actor/Hardy
+$curl -H "Content-Type:application/json" -X POST -d '{"name":"Tom Hardy","facebook likes":27000,"unspacedName":"TomHardy"}' http://<i></i>127.0.0.1:5000/actor/TomHardy
+
+Note: If you try to post an actor who's name is already present, you will get the message "Actor with the name [actor name] already exists."
 
 ### PUT
 To update an existing actor's information use the following:
 
-$curl -H "Content-Type:application/json" -X PUT -d '{"last name":"[actor's last name]","full name":"[actor's full name]","facebook likes":[number of facebook likes]}' http://<i></i>127.0.0.1:5000/actor/[actor's last name]
+$curl -s -H "Content-Type:application/json" -X PUT -d '{"name":"[actor's name]","unspacedName":"[actor's unspaced name]","facebook likes":[number of facebook likes]}' http://<i></i>127.0.0.1:5000/actor/[actor's unspaced name]
 
 #### Example:
 To change Harrison Ford's number of facebook likes to 123456, use the following:
 
-$curl -H "Content-Type:application/json" -X PUT -d '{"last name":"Ford","full name":"Harrison Ford","facebook likes":123456}' http://<i></i>127.0.0.1:5000/actor/Ford
+$curl -s -H "Content-Type:application/json" -X PUT -d '{"name":"Harrison Ford","unspacedName":"HarrisonFord","facebook likes":123456}' http://<i></i>127.0.0.1:5000/actor/HarrisonFord
 
 ### DELETE
 To delete an actor from the REST endpoint use the following:
 
-$curl -X DELETE http://<i></i>127.0.0.1:5000/actor/[actor's last name]
+$curl -s -X DELETE http://<i></i>127.0.0.1:5000/actor/[actor's unspaced name]
 
 #### Example:
 To delete Harrison Ford from the rest endpoint:
 
-$curl -X DELETE http://<i></i>127.0.0.1:5000/actor/Ford
+$curl -s -X DELETE http://<i></i>127.0.0.1:5000/actor/HarrisonFord
 
-You will receive a "Ford is deleted" message, and if you enter http://<i></i>127.0.0.1:5000/actor/Ford you will get an "Actor not found" message.
+You will receive a "HarrisonFord is deleted" message, and if you enter http://<i></i>127.0.0.1:5000/actor/HarrisonFord you will get an "Actor not found" message.
 
 
